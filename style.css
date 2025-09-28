@@ -1,0 +1,51 @@
+/* --- Root Variables --- */
+:root { --calm-blue: #2979FF; --hover-blue: #0056F6; --text-color: #343A40; --page-bg-start: #E9F1FF; --page-bg-end: #FFFFFF; --safety-bg: #FFF3CD; --safety-border: #FFC107; }
+body { font-family: 'Nunito', sans-serif; line-height: 1.7; margin: 0; padding: 20px; color: var(--text-color); text-align: center; background: linear-gradient(to bottom, var(--page-bg-start), var(--page-bg-end)); background-repeat: no-repeat; min-height: 100vh; transition: background-color 0.3s, color 0.3s; }
+
+/* --- Header Controls --- */
+.accessibility-menu { position: fixed; top: 20px; left: 20px; z-index: 1001; display: flex; gap: 10px; align-items: center; transition: top 0.3s ease; }
+.accessibility-menu button { background-color: #fff; border: 1px solid #ccc; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 16px; color: #333; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.escape-button { position: fixed; top: 20px; right: 20px; background-color: var(--calm-blue); color: white; border: none; padding: 12px 20px; font-size: 1em; font-weight: 700; border-radius: 50px; cursor: pointer; z-index: 1001; box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: top 0.3s ease, background-color 0.2s ease; }
+
+/* --- High Contrast & Font Size --- */
+body.font-large { font-size: 115%; }
+body.high-contrast { background: #000; color: #fff; }
+body.high-contrast .container, body.high-contrast .mission { background: #000; border: 2px solid #fff; }
+body.high-contrast .mission { background: #333; }
+body.high-contrast h1, body.high-contrast h2, body.high-contrast p { color: #fff; }
+body.high-contrast .btn-primary { background-color: #000; border: 2px solid #FFFF00; color: #FFFF00; }
+body.high-contrast .btn-secondary { background-color: #000; border: 2px solid #fff; color: #fff; }
+body.high-contrast .escape-button { background-color: #FFFF00; color: #000; border: 2px solid #000; }
+body.high-contrast .escape-button:hover { background-color: #CCCC00; }
+body.high-contrast .safety-notice { background-color: #333; border-left-color: #FFFF00; color: #fff; }
+body.high-contrast .safety-notice a { color: #00BFFF; font-weight: bold; }
+
+/* --- Main Content Styles --- */
+.container { max-width: 700px; margin: 80px auto 40px; padding: 40px; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); border: 1px solid rgba(255, 255, 255, 0.3); }
+h1 { font-weight: 800; font-size: 2.5em; color: var(--text-color); margin-bottom: 15px; }
+h2 { font-weight: 400; font-size: 1.3em; color: #6c757d; margin-top: 40px; margin-bottom: 10px; }
+.mission { max-width: 550px; margin: 0 auto 40px auto; padding: 10px 25px; background-color: var(--page-bg-start); border-radius: 15px; text-align: center; border: 1px solid #D6E4FF; }
+.mission p { font-size: 1.15em; line-height: 1.8; }
+.action-buttons a { text-decoration: none; padding: 15px 30px; border-radius: 50px; margin: 10px; display: inline-block; font-weight: 700; font-size: 1.1em; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
+.action-buttons i { margin-right: 8px; }
+.btn-primary { background-color: var(--calm-blue); color: white; border: 2px solid var(--calm-blue); }
+.btn-secondary { background-color: transparent; color: var(--calm-blue); border: 2px solid var(--calm-blue); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 7px 20px rgba(41, 121, 255, 0.25); }
+.btn-secondary:hover { transform: translateY(-3px); background-color: var(--calm-blue); color: white; box-shadow: 0 7px 20px rgba(41, 121, 255, 0.25); }
+.privacy-signal { margin-top: 30px; color: #6c757d; font-size: 0.9em; }
+.safety-notice { margin-top: 20px; padding: 15px; background-color: var(--safety-bg); border-radius: 10px; border-left: 5px solid var(--safety-border); text-align: center; }
+.escape-button:hover { background-color: var(--hover-blue); }
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+    body { padding: 10px; font-size: 16px; }
+    .container { margin: 70px auto 20px; padding: 20px; width: auto; }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.2em; }
+    .mission p { font-size: 1em; }
+    .accessibility-menu { top: 10px; left: 10px; gap: 5px; }
+    .accessibility-menu button { width: 35px; height: 35px; font-size: 14px; }
+    .escape-button { top: 10px; right: 10px; padding: 8px 16px; font-size: 0.9em; }
+    .action-buttons { display: flex; flex-direction: column; align-items: stretch; gap: 15px; }
+    .action-buttons a { margin: 0; font-size: 1em; }
+}

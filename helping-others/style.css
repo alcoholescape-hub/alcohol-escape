@@ -1,0 +1,60 @@
+/* Styles for all subpages */
+
+.back-link {
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--calm-blue);
+}
+
+.intro-text {
+    font-size: 1.15em;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to one column for mobile */
+    gap: 20px;
+    text-align: left;
+}
+
+.resource-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+}
+
+.resource-card h3 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.btn-resource {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--calm-blue);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-resource:hover {
+    background-color: var(--hover-blue);
+}
+
+/* Make the grid responsive on larger screens */
+@media (min-width: 768px) {
+    .resource-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
