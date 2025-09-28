@@ -2,7 +2,7 @@
 :root { --calm-blue: #2979FF; --hover-blue: #0056F6; --text-color: #343A40; --page-bg-start: #E9F1FF; --page-bg-end: #FFFFFF; --safety-bg: #FFF3CD; --safety-border: #FFC107; }
 body { font-family: 'Nunito', sans-serif; line-height: 1.7; margin: 0; padding: 0; color: var(--text-color); text-align: center; background: linear-gradient(to bottom, var(--page-bg-start), var(--page-bg-end)); background-repeat: no-repeat; min-height: 100vh; transition: background-color 0.3s, color 0.3s; }
 
-/* --- NEW: Top Bar Header --- */
+/* --- Top Bar Header --- */
 .top-bar {
     position: fixed;
     top: 0;
@@ -12,46 +12,25 @@ body { font-family: 'Nunito', sans-serif; line-height: 1.7; margin: 0; padding: 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 15px;
+    padding: 10px 20px; /* UPDATED: Increased padding for more height */
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-bottom: 1px solid #e0e0e0;
 }
 
-/* --- UPDATED: Header Controls (No longer fixed) --- */
-.accessibility-menu {
-    position: static; /* Remove fixed positioning */
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
+/* --- Header Controls --- */
+.accessibility-menu { position: static; display: flex; gap: 10px; align-items: center; }
 .accessibility-menu button { background-color: #fff; border: 1px solid #ccc; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 16px; color: #333; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.escape-button { position: static; background-color: var(--calm-blue); color: white; border: none; padding: 10px 20px; font-size: 0.9em; font-weight: 700; border-radius: 50px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: background-color 0.2s ease; }
 
-.escape-button {
-    position: static; /* Remove fixed positioning */
-    background-color: var(--calm-blue);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 0.9em;
-    font-weight: 700;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    transition: background-color 0.2s ease;
-}
-
-/* UPDATED: Logo Styling for the Header */
-.site-logo {
-    text-align: center;
-}
+/* Logo Styling for the Header */
+.site-logo { text-align: center; }
 .site-logo img {
-    max-height: 40px; /* Make logo smaller to fit in the bar */
+    max-height: 55px; /* UPDATED: Increased logo size */
     width: auto;
     display: block;
 }
-
 
 /* --- High Contrast & Font Size --- */
 body.font-large { font-size: 115%; }
@@ -70,10 +49,9 @@ body.high-contrast .safety-notice a { color: #00BFFF; font-weight: bold; }
 /* --- Main Content Styles --- */
 .container { 
     max-width: 700px;
-    margin: 80px auto 40px;
+    margin: 120px auto 40px; /* UPDATED: Pushed content down to clear taller bar */
     padding: 40px;
-    padding-top: 0; /* No need for padding-top as logo is gone */
-    margin-top: 100px; /* Push content down below the fixed top bar */
+    padding-top: 0;
     background-color: rgba(255, 255, 255, 0.85); 
     backdrop-filter: blur(5px); 
     -webkit-backdrop-filter: blur(5px); 
@@ -99,10 +77,16 @@ h2 { font-weight: 400; font-size: 1.3em; color: #6c757d; margin-top: 40px; margi
 /* --- MOBILE RESPONSIVE STYLES --- */
 @media (max-width: 768px) {
     .top-bar { padding: 8px 10px; }
-    .site-logo img { max-height: 35px; } /* Even smaller logo for mobile */
+    .site-logo img {
+        max-height: 40px; /* UPDATED: Increased mobile logo size */
+    }
     .accessibility-menu button { width: 35px; height: 35px; font-size: 14px; }
     .escape-button { padding: 8px 12px; font-size: 0.8em; }
-    .container { margin: 80px 10px 20px; padding: 20px; width: auto; }
+    .container {
+        margin: 90px 10px 20px; /* UPDATED: Pushed content down on mobile */
+        padding: 20px;
+        width: auto;
+    }
     h1 { font-size: 1.8em; }
     h2 { font-size: 1.2em; }
     .mission p { font-size: 1em; }
