@@ -29,9 +29,62 @@
     color: var(--text-color);
 }
 
-.arrow-down {
+/* UPDATED: Arrow now points to the bottom-right corner */
+.chat-arrow {
     font-size: 2.5em;
     color: var(--calm-blue);
     line-height: 1;
     margin-bottom: 10px;
+    text-align: right;
+    padding-right: 15px;
+}
+
+/* --- NEW: Resource Section Styles --- */
+.resources-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #dee2e6; /* A line to separate the sections */
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to one column for mobile */
+    gap: 20px;
+    text-align: left;
+}
+
+.resource-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+}
+
+.resource-card h3 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.btn-resource {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--calm-blue);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-resource:hover {
+    background-color: var(--hover-blue);
+}
+
+/* Make the resource grid responsive on larger screens */
+@media (min-width: 768px) {
+    .resource-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
