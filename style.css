@@ -12,11 +12,9 @@ body { font-family: 'Nunito', sans-serif; line-height: 1.7; margin: 0; padding: 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* UPDATED: Increased padding for more height */
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-bottom: 1px solid #e0e0e0;
+    padding: 8px 15px; /* REVERTED: Less padding */
+    background: transparent; /* UPDATED: Transparent background */
+    border-bottom: none; /* UPDATED: No border */
 }
 
 /* --- Header Controls --- */
@@ -27,7 +25,7 @@ body { font-family: 'Nunito', sans-serif; line-height: 1.7; margin: 0; padding: 
 /* Logo Styling for the Header */
 .site-logo { text-align: center; }
 .site-logo img {
-    max-height: 55px; /* UPDATED: Increased logo size */
+    max-height: 40px; /* REVERTED: Smaller logo size */
     width: auto;
     display: block;
 }
@@ -35,7 +33,7 @@ body { font-family: 'Nunito', sans-serif; line-height: 1.7; margin: 0; padding: 
 /* --- High Contrast & Font Size --- */
 body.font-large { font-size: 115%; }
 body.high-contrast { background: #000; color: #fff; }
-body.high-contrast .top-bar { background: rgba(0,0,0,0.8); border-bottom: 1px solid #333; }
+body.high-contrast .top-bar { background: rgba(0,0,0,0.8); border-bottom: 1px solid #333; } /* High contrast mode keeps a background for readability */
 body.high-contrast .container, body.high-contrast .mission { background: #000; border: 2px solid #fff; }
 body.high-contrast .mission { background: #333; }
 body.high-contrast h1, body.high-contrast h2, body.high-contrast p { color: #fff; }
@@ -49,7 +47,7 @@ body.high-contrast .safety-notice a { color: #00BFFF; font-weight: bold; }
 /* --- Main Content Styles --- */
 .container { 
     max-width: 700px;
-    margin: 120px auto 40px; /* UPDATED: Pushed content down to clear taller bar */
+    margin: 100px auto 40px; /* REVERTED: Adjusted margin */
     padding: 40px;
     padding-top: 0;
     background-color: rgba(255, 255, 255, 0.85); 
@@ -78,12 +76,12 @@ h2 { font-weight: 400; font-size: 1.3em; color: #6c757d; margin-top: 40px; margi
 @media (max-width: 768px) {
     .top-bar { padding: 8px 10px; }
     .site-logo img {
-        max-height: 40px; /* UPDATED: Increased mobile logo size */
+        max-height: 35px; /* REVERTED: Smaller mobile logo */
     }
     .accessibility-menu button { width: 35px; height: 35px; font-size: 14px; }
     .escape-button { padding: 8px 12px; font-size: 0.8em; }
     .container {
-        margin: 90px 10px 20px; /* UPDATED: Pushed content down on mobile */
+        margin: 80px 10px 20px; /* REVERTED: Adjusted mobile margin */
         padding: 20px;
         width: auto;
     }
