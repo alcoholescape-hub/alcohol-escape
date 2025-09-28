@@ -49,31 +49,3 @@ h2 { font-weight: 400; font-size: 1.3em; color: #6c757d; margin-top: 40px; margi
     .action-buttons { display: flex; flex-direction: column; align-items: stretch; gap: 15px; }
     .action-buttons a { margin: 0; font-size: 1em; }
 }
-
-/* --- TAWK.TO WIDGET CUSTOMIZATION --- */
-
-/* This CSS targets the container that Tawk.to creates and adds a label above it. */
-/* The iframe itself is inside a div, this finds the div and adds the content. */
-iframe[data-tawk-widget-id]::before {
-    content: "Talk with us!";
-    position: absolute;
-    bottom: 70px; /* Position it right above the widget */
-    right: 0;
-    background-color: var(--calm-blue);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 10px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    white-space: nowrap;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-}
-
-/* Adjust position slightly for mobile */
-@media (max-width: 768px) {
-    iframe[data-tawk-widget-id]::before {
-        bottom: 60px;
-        font-size: 12px;
-    }
-}
