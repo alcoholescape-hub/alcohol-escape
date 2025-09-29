@@ -1,4 +1,4 @@
-/* Styles specific to the "For Myself" page */
+/* Styles for all subpages */
 
 .back-link {
     display: block;
@@ -29,7 +29,6 @@
     color: var(--text-color);
 }
 
-/* --- Resource Section Styles --- */
 .resources-section {
     margin-top: 50px;
     padding-top: 30px;
@@ -75,6 +74,6 @@
 /* Make the resource grid responsive on larger screens */
 @media (min-width: 768px) {
     .resource-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
