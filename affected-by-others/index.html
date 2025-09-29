@@ -10,8 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="accessibility-menu"><button id="font-toggle" title="Increase Font Size"><i class="fa-solid fa-font"></i></button><button id="contrast-toggle" title="High Contrast Mode"><i class="fa-solid fa-circle-half-stroke"></i></button></div>
-    <button id="quick-escape" class="escape-button">Quick Escape →</button>
+    <header class="top-bar">
+        <div class="accessibility-menu"><button id="font-toggle" title="Increase Font Size"><i class="fa-solid fa-font"></i></button><button id="contrast-toggle" title="High Contrast Mode"><i class="fa-solid fa-circle-half-stroke"></i></button></div>
+        <div class="site-logo">
+            <img src="../logo.png" alt="AlcoholEscape Logo">
+        </div>
+        <button id="quick-escape" class="escape-button">Quick Escape →</button>
+    </header>
+    
     <div class="container">
         <a href="/" class="back-link">← Back to Home</a>
         <header><h1>Your Feelings Are Valid.</h1></header>
@@ -26,7 +32,6 @@
         </main>
     </div>
     <script src="../script.js"></script>
-
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
