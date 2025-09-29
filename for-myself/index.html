@@ -10,49 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="accessibility-menu"><button id="font-toggle" title="Increase Font Size"><i class="fa-solid fa-font"></i></button><button id="contrast-toggle" title="High Contrast Mode"><i class="fa-solid fa-circle-half-stroke"></i></button></div>
-    <button id="quick-escape" class="escape-button">Quick Escape →</button>
+
+    <header class="top-bar">
+        <div class="accessibility-menu">
+            <button id="font-toggle" title="Increase Font Size"><i class="fa-solid fa-font"></i></button>
+            <button id="contrast-toggle" title="High Contrast Mode"><i class="fa-solid fa-circle-half-stroke"></i></button>
+        </div>
+        <div class="site-logo">
+            <img src="../logo.png" alt="AlcoholEscape Logo">
+        </div>
+        <button id="quick-escape" class="escape-button">Quick Escape →</button>
+    </header>
+
     <div class="container">
         <a href="/" class="back-link">← Back to Home</a>
         <header><h1>Taking the First Step Is the Hardest Part.</h1></header>
         <main>
             <p class="intro-text">You've already done it. Acknowledging you might need help is a sign of incredible strength. You are not a bad person. You are a person who is struggling, and you are not alone on this path.</p>
-            
             <div class="chat-prompt">
                 <h2>Your Next Step is to Talk</h2>
                 <p>The chat widget in the bottom right corner of your screen is the next step. It's safe, it's anonymous, and a real person is here to listen without judgment. Just say hello to start.</p>
             </div>
-
             <div class="resources-section">
                 <h2>Also, Explore These Resources</h2>
                 <div class="resource-grid">
-                    <div class="resource-card">
-                        <h3>Alcoholics Anonymous (AA)</h3>
-                        <p>The most well-known peer-support group. Find a free, anonymous meeting online or near you.</p>
-                        <a href="https://www.aa.org/find-aa" target="_blank" rel="noopener noreferrer" class="btn-resource">Find an AA Meeting</a>
-                    </div>
-                    <div class="resource-card">
-                        <h3>SMART Recovery</h3>
-                        <p>A popular, science-based alternative to 12-step programs that focuses on self-empowerment.</p>
-                        <a href="https://meetings.smartrecovery.org/meetings/" target="_blank" rel="noopener noreferrer" class="btn-resource">Find a SMART Meeting</a>
-                    </div>
-                    <div class="resource-card">
-                        <h3>NIAAA Website</h3>
-                        <p>The National Institute on Alcohol Abuse and Alcoholism offers trusted information and a treatment navigator.</p>
-                        <a href="https://www.niaaa.nih.gov/" target="_blank" rel="noopener noreferrer" class="btn-resource">Visit NIAAA</a>
-                    </div>
-                    <div class="resource-card">
-                        <h3>SAMHSA Website</h3>
-                        <p>The Substance Abuse and Mental Health Services Administration provides information and resources.</p>
-                        <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener noreferrer" class="btn-resource">Visit SAMHSA</a>
-                    </div>
+                    <div class="resource-card"><h3>Alcoholics Anonymous (AA)</h3><p>The most well-known peer-support group. Find a free, anonymous meeting online or near you.</p><a href="https://www.aa.org/find-aa" target="_blank" rel="noopener noreferrer" class="btn-resource">Find an AA Meeting</a></div>
+                    <div class="resource-card"><h3>SMART Recovery</h3><p>A popular, science-based alternative to 12-step programs that focuses on self-empowerment.</p><a href="https://meetings.smartrecovery.org/meetings/" target="_blank" rel="noopener noreferrer" class="btn-resource">Find a SMART Meeting</a></div>
+                    <div class="resource-card"><h3>NIAAA Website</h3><p>The National Institute on Alcohol Abuse and Alcoholism offers trusted information and a treatment navigator.</p><a href="https://www.niaaa.nih.gov/" target="_blank" rel="noopener noreferrer" class="btn-resource">Visit NIAAA</a></div>
+                    <div class="resource-card"><h3>SAMHSA Website</h3><p>The Substance Abuse and Mental Health Services Administration provides information and resources.</p><a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener noreferrer" class="btn-resource">Visit SAMHSA</a></div>
                 </div>
             </div>
         </main>
     </div>
     
     <script src="../script.js"></script>
-
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
